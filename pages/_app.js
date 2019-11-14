@@ -1,12 +1,12 @@
-import { withRouter } from 'next/router';
-import App, { Container } from 'next/app';
-import { ApolloProvider } from 'react-apollo';
+import { withRouter } from "next/router";
+import App from "next/app";
+import { ApolloProvider } from "react-apollo";
 
-import { RouterContext, UserContext } from '../api/context';
+import { RouterContext, UserContext } from "../api/context";
 
-import withApollo from '../lib/withApollo';
+import withApollo from "../lib/withApollo";
 
-import Page from '../components/Page';
+import Page from "../components/Page";
 
 class AppWrapper extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -25,15 +25,13 @@ class AppWrapper extends App {
     const { apollo, Component, pageProps, router } = this.props;
 
     return (
-      <Container>
-        <ApolloProvider client={apollo}>
-          <RouterContext.Provider value={router}>
-            <Page>
-              <Component {...pageProps} />
-            </Page>
-          </RouterContext.Provider>
-        </ApolloProvider>
-      </Container>
+      <ApolloProvider client={apollo}>
+        <RouterContext.Provider value={router}>
+          <Page>
+            <Component {...pageProps} />
+          </Page>
+        </RouterContext.Provider>
+      </ApolloProvider>
     );
   }
 }
