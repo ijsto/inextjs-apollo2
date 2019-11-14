@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import Meta from "./Meta";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
-import { black, grey } from "../utils/Colors";
+import { black } from "../utils/Colors";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -15,12 +15,6 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Comfortaa';
     src: url('/font/Comfortaa-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Boogaloo';
-    src: url('/font/Boogaloo-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -75,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Boogaloo', sans-serif;
+    font-family: 'Neutra Text', sans-serif;
     margin-top: 1em;
     color: #fff;
     font-weight: 400;

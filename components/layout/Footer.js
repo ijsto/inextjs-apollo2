@@ -1,13 +1,14 @@
-import Link from 'next/link';
-import styled from 'styled-components';
+import Link from "next/link";
+import styled from "styled-components";
 
-import Socials from '../Socials';
+import Socials from "../Socials";
 
 const StyledFooter = styled.footer`
   background: #776677;
   bottom: 0;
   left: 0;
   padding: 1.5em;
+  position: fixed;
   text-align: center;
   width: 100%;
 

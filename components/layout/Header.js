@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import styled from 'styled-components';
-import { black, white, primary } from '../../utils/Colors';
+import styled from "styled-components";
+import { black, white, primary } from "../../utils/Colors";
 
 const StyledHeader = styled.header`
   align-items: center;
@@ -35,21 +35,16 @@ export const Header = () => {
       <div>
         <Link href="/">
           <a>
-            <span>
-              2<span>0</span>
-            </span>
+            <span>iJS - NextJS + GraphQL</span>
           </a>
         </Link>
       </div>
       <div>
         <Link href="/">
-          <a>Talent</a>
+          <a>Query</a>
         </Link>
-        <Link href="/books">
-          <a>Apply</a>
-        </Link>
-        <Link href="/about">
-          <a>Contact</a>
+        <Link href="/mutation">
+          <a>Mutation</a>
         </Link>
       </div>
     </StyledHeader>
